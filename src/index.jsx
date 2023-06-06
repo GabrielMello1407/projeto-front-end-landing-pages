@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, css } from 'styled-components';
 import ReactDOM from 'react-dom/client';
 
 import Home from './templates/Home';

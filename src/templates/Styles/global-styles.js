@@ -6,8 +6,6 @@ export const GlobalStyles = createGlobalStyle`
   padding: 0;
 }
 body{
-  ${({ theme }) => css`
-    background: ${theme.colors.mainBg};
-  `}
+
 }
 `;
