@@ -1,8 +1,32 @@
-import { Heading } from ".";
+import { Heading } from '.';
 
 export default {
-  title:'Heading',
+  title: 'Heading',
   component: Heading,
-}
+  args: {
+    children: 'O texto está escuro',
+    light: false,
+  },
+  argTypes: {
+    children: { type: 'string' },
+    light: { type: 'boolean' },
+  },
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
+  },
+};
+export const Light = (args) => <Heading {...args} />;
+export const Dark = (args) => <Heading {...args} light={true} />;
 
-export const Template = (args) => <Heading {...args}/>
+Light.parameters = {
+  backgrounds: {
+    default: 'light',
+  },
+};
+
+Dark.args = {
+  children: 'O texto está claro',
+  light: false,
+};
